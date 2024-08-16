@@ -77,7 +77,7 @@ function showAlertWithValues() {
     const alertMessage = `Purchase Month: ${purchasemonth}\nPurchase Year: ${purchaseyear}\nPurchase price: ${purchaseprice}\nLabel: ${labelTextfirst}\nValueaddinginvestment: ${valueaddinginvestments}\nestimatedsellingprice: ${estimatedsellingprice}\nsalescosts: ${salescosts}\npropertygaintax: ${propertygaintax}\ntaxrate: ${taxrate}\nownsproperty: ${ownsproperty}\nzipcity: ${zipcity}`;
 
     // Show the alert with the values and toggle status
-    alert(alertMessage);
+    
 
     // Set the values to the hidden input fields
     document.getElementById('purchasemonth').value = purchasemonth;
