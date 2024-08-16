@@ -18,12 +18,6 @@ function showAlertWithValues() {
 
     const ownsproperty = document.getElementById('eigentuemer').value;
     const zipcity = document.getElementById('plz_ort_custom').value;
-    
-    
-
-    
-    
-
 
     // Check if the toggle is checked
     const togglefirst = document.getElementById('mit_einlage');
