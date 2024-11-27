@@ -42,30 +42,35 @@ function showAlertWithValues() {
 
 
     if (toggleCheckedfirst) {
-        // Get the label's text content for the toggle
-        const labelfirst = document.querySelector('label[for="mit_einlage"]');
-        labelTextfirst = labelfirst.textContent || labelfirst.innerText;
-    }
-    if (toggleCheckedsecond) {
-        // Get the label's text content for the toggle
-        const labelsecond = document.querySelector('label[for="selbstbewohnt"]');
-        labelTextsecond = labelsecond.textContent || labelsecond.innerText;
-    }
-    if (toggleCheckedthird) {
-        // Get the label's text content for the toggle
-        const labelthird = document.querySelector('label[for="aufschub_gewinnsteuer"]');
-        labelTextthird = labelthird.textContent || labelthird.innerText;
-    }
-    if (toggleCheckedfourth) {
-        // Get the label's text content for the toggle
-        const labelfourth = document.querySelector('label[for="renditeobjekt"]');
-        labelTextfourth = labelfourth.textContent || labelfourth.innerText;
-    }
-    if (toggleCheckedfive) {
-        // Get the label's text content for the toggle
-        const labelfive = document.querySelector('label[for="aufschub_frueher"]');
-        labelTextfive = labelfive.textContent || labelfive.innerText;
-    }
+    // Get the label's text content for the toggle
+    const labelfirst = document.querySelector('label[for="mit_einlage"]');
+    labelTextfirst = (labelfirst.textContent || labelfirst.innerText).replace(/\s+/g, ' ').trim();
+}
+
+if (toggleCheckedsecond) {
+    // Get the label's text content for the toggle
+    const labelsecond = document.querySelector('label[for="selbstbewohnt"]');
+    labelTextsecond = (labelsecond.textContent || labelsecond.innerText).replace(/\s+/g, ' ').trim();
+}
+
+if (toggleCheckedthird) {
+    // Get the label's text content for the toggle
+    const labelthird = document.querySelector('label[for="aufschub_gewinnsteuer"]');
+    labelTextthird = (labelthird.textContent || labelthird.innerText).replace(/\s+/g, ' ').trim();
+}
+
+if (toggleCheckedfourth) {
+    // Get the label's text content for the toggle
+    const labelfourth = document.querySelector('label[for="renditeobjekt"]');
+    labelTextfourth = (labelfourth.textContent || labelfourth.innerText).replace(/\s+/g, ' ').trim();
+}
+
+if (toggleCheckedfive) {
+    // Get the label's text content for the toggle
+    const labelfive = document.querySelector('label[for="aufschub_frueher"]');
+    labelTextfive = (labelfive.textContent || labelfive.innerText).replace(/\s+/g, ' ').trim();
+}
+
 
     // Create the alert message including the toggle status and label text (if checked)
     const alertMessage = `Purchase Month: ${purchasemonth}\nPurchase Year: ${purchaseyear}\nPurchase price: ${purchaseprice}\nLabel: ${labelTextfirst}\nValueaddinginvestment: ${valueaddinginvestments}\nestimatedsellingprice: ${estimatedsellingprice}\nsalescosts: ${salescosts}\npropertygaintax: ${propertygaintax}\ntaxrate: ${taxrate}\nownsproperty: ${ownsproperty}\nzipcity: ${zipcity}`;
